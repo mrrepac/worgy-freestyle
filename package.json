@@ -25,7 +25,9 @@
     "files": [
       "main.js",
       "index.html",
-      "audio/**/*"
+      "audio/**/*",
+      "icon.ico",
+      "icon.png"
     ],
     "win": {
       "target": "portable",
@@ -35,8 +37,14 @@
       "artifactName": "WorgyFreestyle-${version}-win.exe"
     },
     "mac": {
-      "target": "zip",
-      "icon": "icon.png"
+      "target": [
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "icon.png",
+      "category": "public.app-category.music"
     }
   }
 }

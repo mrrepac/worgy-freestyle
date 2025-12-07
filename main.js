@@ -14,7 +14,7 @@ function createWindow() {
         minHeight: 600,
         maxWidth: 500,
         resizable: true,
-        icon: path.join(__dirname, 'icon.ico'),
+        icon: path.join(__dirname, process.platform === 'darwin' ? 'icon.png' : 'icon.ico'),
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true
