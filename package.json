@@ -1,0 +1,43 @@
+{
+  "name": "worgy-freestyle",
+  "version": "1.0.0",
+  "description": "Генератор слов для фристайла с битами",
+  "main": "main.js",
+  "author": "Worgy",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win dir",
+    "build:win": "electron-builder --win portable",
+    "build:mac": "electron-builder --mac zip",
+    "build:all": "electron-builder --win portable --mac zip"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.worgy.freestyle",
+    "productName": "Worgy Freestyle",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "audio/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "WorgyFreestyle-${version}-win.exe"
+    },
+    "mac": {
+      "target": "zip",
+      "icon": "icon.png"
+    }
+  }
+}
+
